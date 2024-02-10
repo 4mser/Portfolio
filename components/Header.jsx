@@ -2,9 +2,9 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <div className="absolute top-1/2 left-1/2 z-50 -translate-x-1/2 -translate-y-1/2 flex">
-      <Image src={"/amser.png"} width={160} height={50} alt="logo" />
-    </div>
+    <header className="p-4 fixed left-0 top-0 z-50 w-full backdrop-blur-sm">
+      <Image src={"/amser.png"} width={100} height={50} alt="logo" />
+    </header>
   );
 };
 

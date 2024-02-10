@@ -65,7 +65,7 @@ function Bubbles() {
       receiveShadow
       position={[0, 0, 0]}
     >
-      <sphereGeometry args={[0.02, 10, 10]} />
+      <sphereGeometry args={[0.05, 10, 10]} />
       <meshStandardMaterial roughness={1} color="#eeeeee" />
       {particles.map((data, i) => (
         <Bubble key={i} {...data} />
