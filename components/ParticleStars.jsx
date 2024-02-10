@@ -23,7 +23,7 @@ export default function ParticleStars() {
         gl={{ antialias: false }}
         camera={{ fov: 100, position: [0, 0, 20] }}
       >
-        <color attach="background" args={["#0b0e11"]} />
+        <color attach="background" args={["#000000"]} />
         <fog attach="fog" args={["#5d666a", 40, -5]} />
         <ambientLight intensity={0.8} />
         <pointLight position={[10, 10, 10]} intensity={1} castShadow />
