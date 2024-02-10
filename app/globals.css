@@ -6,6 +6,8 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --degree: linear-gradient(45deg,  #1b9d63, #38a3ca);
+  --blue: #38a3ca;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,4 +32,56 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  animation: gradient 8s ease infinite;
+  background-size: 200% 200%;
+}
+
+@keyframes buttonLandPage {
+  0% {
+    box-shadow: 0 5px 30px -16px #06b6d4;
+  }
+
+  50% {
+    box-shadow: 0 10px 50px -12px #06b6d4;
+  }
+
+  100% {
+    box-shadow: 0 5px 30px -16px #06b6d4
+  }
+}
+
+/* Barra de desplazamiento vertical */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Barra de desplazamiento horizontal */
+::-webkit-scrollbar-horizontal {
+  height: 5px;
+}
+
+/* Color de fondo de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+  background-color: #202734; 
+}
+
+/* Color de la barra de desplazamiento en sÃ­ */
+::-webkit-scrollbar-thumb {
+  background-color: var(--blue); 
 }
