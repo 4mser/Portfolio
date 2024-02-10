@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import { motion, AnimatePresence } from "framer-motion";
 
-function MenuMov({ menuOpen }) {
+function MenuMov() {
   const [subMenus, setSubMenus] = useState({
     subMenuOpen: false,
     secondSubMenuOpen: false,
@@ -107,7 +107,7 @@ function MenuMov({ menuOpen }) {
         <motion.div
           // Contenedor Menu
           variants={container}
-          className="w-calc-submenu h-fit overflow-hidden  rounded-md p-px "
+          className="w-calc-submenu h-fit overflow-hidden  rounded-md p-2 "
           style={{
             background: "var(--degree)",
             animation: "gradient 7s ease infinite",

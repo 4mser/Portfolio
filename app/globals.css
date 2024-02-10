@@ -6,8 +6,8 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  --degree: linear-gradient(45deg,  #1b9d63, #38a3ca);
-  --blue: #38a3ca;
+  --degree: linear-gradient(45deg,  #00F1A1, #0394BF);
+  --blue: #03bf803a;
 }
 
 @media (prefers-color-scheme: dark) {
