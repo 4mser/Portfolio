@@ -10,7 +10,7 @@ const ButtonMenu = () => {
 
   return (
     <button
-      className="flex w-7 h-5 p-0.5 rounded-md lg:hidden flex-col justify-between items-center select-none"
+      className="flex w-7 h-5 p-0.5 rounded-md  flex-col justify-between items-center select-none"
       onClick={toggleMenu}
     >
       <div
