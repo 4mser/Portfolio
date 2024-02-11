@@ -35,7 +35,7 @@ const Slider = () => {
               HI, MY NAME IS NICO
             </h2>
             <p className="text-center text-white/70">
-              BUT ON THE WEB I'M{" "}
+              BUT ON THE WEB I'M
               <span className="bg-gradient-to-r from-emerald-400 to-cyan-500 text-transparent bg-clip-text font-bold">
                 AMSER
               </span>
