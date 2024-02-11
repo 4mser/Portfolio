@@ -2,18 +2,28 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Mousewheel } from "swiper/modules";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import ParticleStars from "./ParticleStars";
 import Planet from "./Planet";
 import Projects from "./Projects";
 import { motion, AnimatePresence } from "framer-motion"; // Asegúrate de importar AnimatePresence
+import ButtonMenu from "./movil/ButtonMenu";
+import ButtonDemo from "./ButtonDemo";
 
 const Slider = () => {
   const totalSlides = 3;
   const [currentIndex, setCurrentIndex] = useState(0);
+  const swiperRef = useRef(null); // Crea la referencia
 
   const handleSlideChange = (swiper) => {
     setCurrentIndex(swiper.activeIndex);
+  };
+
+  // Función para cambiar al segundo slide
+  const goToSecondSlide = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slideTo(1); // Índices de slide son base 0
+    }
   };
 
   // Define las variantes de animación para landpage
@@ -73,6 +83,7 @@ const Slider = () => {
               </motion.div>
             )}
           </AnimatePresence>
+          <ButtonDemo goToSecondSlide={goToSecondSlide} />
           <ParticleStars />
         </SwiperSlide>
         <SwiperSlide className="flex justify-center items-center"></SwiperSlide>
