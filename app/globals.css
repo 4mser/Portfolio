@@ -18,6 +18,10 @@
   }
 }
 
+.hollow-text {
+  @apply text-transparent font-bold;
+  -webkit-text-stroke: 1px rgb(255, 255, 255); /* Ajusta el color y el grosor según necesites */
+}
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(

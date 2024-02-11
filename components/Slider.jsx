@@ -31,10 +31,10 @@ const Slider = () => {
       >
         <SwiperSlide className="flex justify-center items-center">
           <div className="absolute z-40 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <h2 className="text-3xl text-center font-bold text-nowrap">
-              HI, MY NAME IS NICO
+            <h2 className="text-3xl text-center font-bold text-nowrap hollow-text">
+              HI, I'M NICO
             </h2>
-            <p className="text-center text-white/70 text-nowrap">
+            <p className="text-center text-white/80 text-nowrap ">
               BUT ON THE WEB IM{" "}
               <span className="bg-gradient-to-r from-emerald-400 to-cyan-500 text-transparent bg-clip-text font-bold">
                 AMSER
