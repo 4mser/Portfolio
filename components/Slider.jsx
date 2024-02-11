@@ -22,6 +22,11 @@ const Slider = () => {
     visible: { opacity: 1, scale: 1, y: 0 },
   };
 
+  const pVariant = {
+    hidden: { opacity: 0, y: -20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <menu className="w-full h-[100dvh] relative">
       <Planet index={currentIndex} totalSlides={totalSlides} />
@@ -52,13 +57,19 @@ const Slider = () => {
                 <h2 className="text-[11vw] text-center font-bold text-nowrap hollow-text">
                   HI, I{"'"}M NICO
                 </h2>
-                <p className="text-center text-white/80 text-nowrap w-full flex justify-center items-center gap-1">
+                <motion.p
+                  variants={pVariant}
+                  initial="hidden"
+                  animate="visible"
+                  transition={{ duration: 0.5, delay: 1 }}
+                  className="text-center text-white/80 text-nowrap w-full flex justify-center items-center gap-1"
+                >
                   BUT
                   <span className="bg-gradient-to-r from-emerald-400 to-cyan-500 text-transparent bg-clip-text font-bold text-nowrap">
                     AMSER
                   </span>
                   ON THE WEB.
-                </p>
+                </motion.p>
               </motion.div>
             )}
           </AnimatePresence>
