@@ -30,6 +30,17 @@ const Slider = () => {
         onSlideChange={handleSlideChange}
       >
         <SwiperSlide className="flex justify-center items-center">
+          <div className="absolute z-40 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <h2 className="text-3xl text-center font-normal text-nowrap">
+              HI, MY NAME IS NICO
+            </h2>
+            <p className="text-center text-white/70">
+              But on the web i'm{" "}
+              <span className="bg-gradient-to-r from-emerald-400 to-cyan-500 text-transparent bg-clip-text font-bold">
+                Amser
+              </span>
+            </p>
+          </div>
           <ParticleStars />
         </SwiperSlide>
         <SwiperSlide className="flex justify-center items-center">
