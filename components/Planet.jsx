@@ -2,16 +2,19 @@ import { motion, useAnimation } from "framer-motion";
 import React, { useEffect } from "react";
 
 const Planet = ({ index, totalSlides }) => {
-  // Controlador de animación de Framer Motion.
   const controls = useAnimation();
 
   useEffect(() => {
     // Calcula los grados de rotación en función del índice actual del slider.
     const degreesPerSlide = 180 / totalSlides;
     const newRotation = degreesPerSlide * index;
+    // Agrega un poco de 'overshoot' para dar la impresión de un impulso.
+    const overshootRotation = newRotation + (index === 0 ? -0 : 0);
 
-    // Anima suavemente al nuevo valor de rotación.
-    controls.start({ rotate: newRotation });
+    // Inicia la animación con un poco de 'overshoot' y luego asienta en la posición final.
+    controls.start({ rotate: overshootRotation }).then(() => {
+      controls.start({ rotate: newRotation });
+    });
   }, [index, totalSlides, controls]);
 
   return (
@@ -19,7 +22,7 @@ const Planet = ({ index, totalSlides }) => {
       <motion.div
         className="relative w-56 h-56 border-2 rounded-full flex items-center justify-center"
         animate={controls}
-        transition={{ type: "tween", ease: "linear", duration: 0.3 }}
+        transition={{ type: "spring", stiffness: 300, damping: 20 }}
       >
         {/* Orbiting planet */}
         <motion.div
