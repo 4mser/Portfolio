@@ -16,7 +16,7 @@ const particles = Array.from({ length: 200 }, () => ({
 
 export default function ParticleStars() {
   return (
-    <section className="w-full h-[100dvh] -z-0 left-0 top-0">
+    <section className="w-full h-full left-0 top-0">
       <Canvas
         shadows
         dpr={[1, 2]}

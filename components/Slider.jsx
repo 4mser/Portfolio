@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // import required modules
 
 import React from "react";
+import ParticleStars from "./ParticleStars";
 
 const Slider = () => {
   return (
@@ -19,7 +20,7 @@ const Slider = () => {
         className=" h-[100dvh]"
       >
         <SwiperSlide className="flex justify-center items-center">
-          Slider 1
+          <ParticleStars />
         </SwiperSlide>
         <SwiperSlide className="flex justify-center items-center">
           Slide 2
