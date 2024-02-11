@@ -58,7 +58,7 @@ const Projects = ({ isVisible }) => {
             {projects.map((project) => (
               <SwiperSlide key={project.id}>
                 <section className="w-full h-[100dvh] flex flex-col justify-center items-end gap-2">
-                  <div className="bg-white/15 w-full flex justify-center items-center h-72 rounded-3xl overflow-hidden">
+                  <div className="bg-white/15 w-full flex justify-center items-center h-fit  rounded-3xl overflow-hidden">
                     <img
                       src={project.image}
                       alt=""
