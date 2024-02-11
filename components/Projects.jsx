@@ -10,9 +10,21 @@ const variants = {
 };
 
 const projects = [
-  { id: 1, name: "proyecto 1" },
-  { id: 2, name: "proyecto 2" },
-  { id: 3, name: "proyecto 3" },
+  {
+    id: 1,
+    name: "Entropía",
+    image: "https://app-valdi.s3.amazonaws.com/entropia/logonuevo-01.png",
+  },
+  {
+    id: 2,
+    name: "Entropía Research Lab",
+    image: "https://app-valdi.s3.amazonaws.com/entropia/logonew-03.png",
+  },
+  {
+    id: 3,
+    name: "Xplorers",
+    image: "https://app-valdi.s3.amazonaws.com/xplorers/xplorers_1.png",
+  },
   // Agrega más proyectos según sea necesario
 ];
 
@@ -45,10 +57,15 @@ const Projects = ({ isVisible }) => {
           >
             {projects.map((project) => (
               <SwiperSlide key={project.id}>
-                <section className="w-full h-[100dvh] flex justify-center items-center">
-                  <div className="bg-white/15 w-full flex justify-center items-center h-64 rounded-3xl">
-                    {project.name}
+                <section className="w-full h-[100dvh] flex flex-col justify-center items-end gap-2">
+                  <div className="bg-white/15 w-full flex justify-center items-center h-72 rounded-3xl overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt=""
+                      className="w-full h-full object-cover"
+                    />
                   </div>
+                  {project.name}
                 </section>
               </SwiperSlide>
             ))}
