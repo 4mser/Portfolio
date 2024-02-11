@@ -58,8 +58,8 @@ function MenuMov() {
 
   const menuItems = [
     {
-      title: "Sobre",
-      submenu: ["- Valores y Objetivos"],
+      title: "Sobre mí",
+      submenu: ["- Películas favoritas", "- Bandas y canciones", ""],
     },
     {
       title: "Soluciones",
