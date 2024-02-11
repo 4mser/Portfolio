@@ -6,7 +6,7 @@ import { Instances, Instance, Environment } from "@react-three/drei";
 import { EffectComposer, N8AO, TiltShift2 } from "@react-three/postprocessing";
 
 // Pre-cálculo de partículas para evitar recalculaciones innecesarias
-const particles = Array.from({ length: 200 }, () => ({
+const particles = Array.from({ length: 500 }, () => ({
   factor: MathUtils.randInt(50, 100),
   speed: MathUtils.randFloat(0.1, 0.75),
   xFactor: MathUtils.randFloatSpread(40),

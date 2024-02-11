@@ -65,7 +65,7 @@ const Projects = ({ isVisible }) => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  {project.name}
+                  {/* {project.name} */}
                 </section>
               </SwiperSlide>
             ))}
