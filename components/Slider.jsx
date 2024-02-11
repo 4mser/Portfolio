@@ -5,6 +5,7 @@ import { Mousewheel } from "swiper/modules";
 import React, { useState } from "react";
 import ParticleStars from "./ParticleStars";
 import Planet from "./Planet";
+import Projects from "./Projects";
 
 const Slider = () => {
   const totalSlides = 3; // Define el número total de slides aquí
@@ -32,8 +33,8 @@ const Slider = () => {
           <ParticleStars />
         </SwiperSlide>
         <SwiperSlide className="flex justify-center items-center">
-          <section className="w-full h-[100dvh] flex justify-center items-center">
-            j2
+          <section className="w-full h-[100dvh]">
+            <Projects isVisible={currentIndex === 1} />
           </section>
         </SwiperSlide>
         <SwiperSlide className="flex justify-center items-center">

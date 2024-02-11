@@ -8,13 +8,9 @@ const Planet = ({ index, totalSlides }) => {
     // Calcula los grados de rotación en función del índice actual del slider.
     const degreesPerSlide = 180 / totalSlides;
     const newRotation = degreesPerSlide * index;
-    // Agrega un poco de 'overshoot' para dar la impresión de un impulso.
-    const overshootRotation = newRotation + (index === 0 ? -0 : 0);
 
-    // Inicia la animación con un poco de 'overshoot' y luego asienta en la posición final.
-    controls.start({ rotate: overshootRotation }).then(() => {
-      controls.start({ rotate: newRotation });
-    });
+    // Anima directamente al nuevo valor de rotación.
+    controls.start({ rotate: newRotation });
   }, [index, totalSlides, controls]);
 
   return (
