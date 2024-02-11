@@ -24,10 +24,14 @@ const Slider = () => {
           <ParticleStars />
         </SwiperSlide>
         <SwiperSlide className="flex justify-center items-center">
-          Slide 2
+          <section className="w-full h-[100dvh] flex justify-center items-center">
+            j2
+          </section>
         </SwiperSlide>
         <SwiperSlide className="flex justify-center items-center">
-          Slide 3
+          <section className="w-full h-[100dvh] flex justify-center items-center">
+            j3
+          </section>
         </SwiperSlide>
       </Swiper>
     </menu>
