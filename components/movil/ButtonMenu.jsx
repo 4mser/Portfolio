@@ -12,7 +12,7 @@ const ButtonMenu = () => {
   return (
     <section>
       <button
-        className="flex w-7 h-5 p-0.5 rounded-md   flex-col justify-between items-center select-none"
+        className="flex w-7 h-5 p-0.5 rounded-md fixed z-50 top-9 right-4  flex-col justify-between items-center select-none"
         onClick={toggleMenu}
       >
         <div
@@ -31,7 +31,7 @@ const ButtonMenu = () => {
           }`}
         />
       </button>
-      {menuOpen && <MenuMovil toggleMenu={toggleMenu} />}
+      {menuOpen && <MenuMovil menuOpen={menuOpen} toggleMenu={toggleMenu} />}
     </section>
   );
 };
