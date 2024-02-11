@@ -6,13 +6,20 @@ import React, { useState } from "react";
 import ParticleStars from "./ParticleStars";
 import Planet from "./Planet";
 import Projects from "./Projects";
+import { motion, AnimatePresence } from "framer-motion"; // Asegúrate de importar AnimatePresence
 
 const Slider = () => {
-  const totalSlides = 3; // Define el número total de slides aquí
+  const totalSlides = 3;
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleSlideChange = (swiper) => {
     setCurrentIndex(swiper.activeIndex);
+  };
+
+  // Define las variantes de animación para landpage
+  const landpageVariants = {
+    hidden: { opacity: 0, scale: 0.5, y: 100 },
+    visible: { opacity: 1, scale: 1, y: 0 },
   };
 
   return (
@@ -30,18 +37,31 @@ const Slider = () => {
         onSlideChange={handleSlideChange}
       >
         <SwiperSlide className="flex justify-center items-center">
-          <div className="landpage absolute z-40 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
-            <h2 className="text-[11vw] text-center font-bold text-nowrap hollow-text">
-              HI, IM NICO
-            </h2>
-            <p className="text-center text-white/80 text-nowrap w-full flex justify-center items-center gap-1">
-              BUT
-              <span className="bg-gradient-to-r from-emerald-400 to-cyan-500 text-transparent bg-clip-text font-bold text-nowrap">
-                AMSER
-              </span>
-              ON THE WEB.
-            </p>
-          </div>
+          {/* AnimatePresence para controlar la entrada y salida basada en el currentIndex */}
+          <AnimatePresence>
+            {currentIndex === 0 && (
+              <motion.div
+                className="landpage absolute z-40 top-1/4 -translate-y-1/4 w-full"
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
+                variants={landpageVariants}
+                transition={{ duration: 0.6 }}
+                key="landpage" // Añade una key para asegurar la correcta animación
+              >
+                <h2 className="text-[11vw] text-center font-bold text-nowrap hollow-text">
+                  HI, I{"'"}M NICO
+                </h2>
+                <p className="text-center text-white/80 text-nowrap w-full flex justify-center items-center gap-1">
+                  BUT
+                  <span className="bg-gradient-to-r from-emerald-400 to-cyan-500 text-transparent bg-clip-text font-bold text-nowrap">
+                    AMSER
+                  </span>
+                  ON THE WEB.
+                </p>
+              </motion.div>
+            )}
+          </AnimatePresence>
           <ParticleStars />
         </SwiperSlide>
         <SwiperSlide className="flex justify-center items-center"></SwiperSlide>
