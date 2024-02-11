@@ -1,35 +1,43 @@
 "use client";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
-
-// import required modules
-
-import React from "react";
+import { Mousewheel } from "swiper/modules";
+import React, { useState } from "react";
 import ParticleStars from "./ParticleStars";
+import Planet from "./Planet";
 
 const Slider = () => {
+  const totalSlides = 3; // Define el número total de slides aquí
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleSlideChange = (swiper) => {
+    setCurrentIndex(swiper.activeIndex);
+  };
+
   return (
-    <menu className="w-full h-[100dvh]">
+    <menu className="w-full h-[100vh] relative">
+      <Planet index={currentIndex} totalSlides={totalSlides} />
+
       <Swiper
         direction={"vertical"}
         pagination={{
           clickable: true,
         }}
-        className=" h-[100dvh]"
+        mousewheel={true}
+        modules={[Mousewheel]}
+        className="h-[100vh]"
+        onSlideChange={handleSlideChange}
       >
         <SwiperSlide className="flex justify-center items-center">
           <ParticleStars />
         </SwiperSlide>
         <SwiperSlide className="flex justify-center items-center">
-          <section className="w-full h-[100dvh] flex justify-center items-center">
+          <section className="w-full h-[100vh] flex justify-center items-center">
             j2
           </section>
         </SwiperSlide>
         <SwiperSlide className="flex justify-center items-center">
-          <section className="w-full h-[100dvh] flex justify-center items-center">
+          <section className="w-full h-[100vh] flex justify-center items-center">
             j3
           </section>
         </SwiperSlide>

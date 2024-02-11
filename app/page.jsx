@@ -11,6 +11,7 @@ export default function Home() {
 }
  */
 
+import Desliza from "@/components/Desliza";
 import Header from "@/components/Header";
 import Slider from "@/components/Slider";
 
