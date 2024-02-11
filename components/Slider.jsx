@@ -46,7 +46,7 @@ const Slider = () => {
                 animate="visible"
                 exit="hidden"
                 variants={landpageVariants}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.3, delay: 0.3 }}
                 key="landpage" // Añade una key para asegurar la correcta animación
               >
                 <h2 className="text-[11vw] text-center font-bold text-nowrap hollow-text">
