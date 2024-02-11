@@ -30,7 +30,7 @@ const Slider = () => {
         onSlideChange={handleSlideChange}
       >
         <SwiperSlide className="flex justify-center items-center">
-          <div className="absolute z-40 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          <div className="absolute z-40 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
             <h2 className="text-[11vw] text-center font-bold text-nowrap hollow-text">
               HI, IM NICO
             </h2>
