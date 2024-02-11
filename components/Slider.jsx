@@ -39,19 +39,15 @@ const Slider = () => {
               <span className="bg-gradient-to-r from-emerald-400 to-cyan-500 text-transparent bg-clip-text font-bold text-nowrap">
                 AMSER
               </span>
-              ON THE WEB
+              ON THE WEB.
             </p>
           </div>
           <ParticleStars />
         </SwiperSlide>
+        <SwiperSlide className="flex justify-center items-center"></SwiperSlide>
         <SwiperSlide className="flex justify-center items-center">
-          <section className="w-full h-[100dvh]">
-            <Projects isVisible={currentIndex === 1} />
-          </section>
-        </SwiperSlide>
-        <SwiperSlide className="flex justify-center items-center">
-          <section className="w-full h-[100dvh] flex justify-center items-center">
-            j3
+          <section className="w-full">
+            <Projects isVisible={currentIndex === 2} />
           </section>
         </SwiperSlide>
       </Swiper>
