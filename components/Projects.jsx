@@ -4,9 +4,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Variantes fuera del componente para evitar re-creaciones innecesarias
 const variants = {
-  hidden: { opacity: 0, x: 300, y: -300, scale: 0.2 },
-  visible: { opacity: 1, x: 0, y: 0, scale: 1 },
-  exit: { opacity: 0 },
+  hidden: { opacity: 0, x: 300, scale: 0.2 },
+  visible: { opacity: 1, x: 0, scale: 1 },
+  exit: { opacity: 0, x: 300, scale: 0.2 },
 };
 
 // Variantes para h2
