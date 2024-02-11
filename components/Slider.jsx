@@ -15,7 +15,7 @@ const Slider = () => {
   };
 
   return (
-    <menu className="w-full h-[100vh] relative">
+    <menu className="w-full h-[100dvh] relative">
       <Planet index={currentIndex} totalSlides={totalSlides} />
 
       <Swiper
@@ -25,19 +25,19 @@ const Slider = () => {
         }}
         mousewheel={true}
         modules={[Mousewheel]}
-        className="h-[100vh]"
+        className="h-[100dvh]"
         onSlideChange={handleSlideChange}
       >
         <SwiperSlide className="flex justify-center items-center">
           <ParticleStars />
         </SwiperSlide>
         <SwiperSlide className="flex justify-center items-center">
-          <section className="w-full h-[100vh] flex justify-center items-center">
+          <section className="w-full h-[100dvh] flex justify-center items-center">
             j2
           </section>
         </SwiperSlide>
         <SwiperSlide className="flex justify-center items-center">
-          <section className="w-full h-[100vh] flex justify-center items-center">
+          <section className="w-full h-[100dvh] flex justify-center items-center">
             j3
           </section>
         </SwiperSlide>
