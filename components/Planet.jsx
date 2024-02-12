@@ -22,13 +22,18 @@ const Planet = ({ index, totalSlides }) => {
       >
         {/* Orbiting planet */}
         <motion.div
-          className="w-7 h-7 bg-gradient-to-tr from-emerald-500 to-sky-400 rounded-full absolute"
+          className="w-7 h-7 shadow-custom2 rounded-full absolute p-px flex justify-center items-center"
           style={{
             right: "82%",
             translateX: "0%",
             translateY: "-350%",
+            background: "var(--degree)",
+            animation: "gradient 7s ease infinite",
+            backgroundSize: "200% 30%",
           }}
-        />
+        >
+          <div className="bg-custom-btn w-full h-full rounded-full" />
+        </motion.div>
       </motion.div>
     </div>
   );
