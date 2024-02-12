@@ -1,4 +1,4 @@
-"use client";
+/* "use client";
 import { Icon } from "@iconify/react";
 import { motion, AnimatePresence } from "framer-motion"; // Asegúrate de importar AnimatePresence
 
@@ -32,6 +32,41 @@ function ButtonDemo({ isVisible }) {
           </p>
         </motion.div>
       )}
+    </>
+  );
+}
+
+export default ButtonDemo;
+ */
+
+import { Icon } from "@iconify/react";
+
+function ButtonDemo() {
+  return (
+    <>
+      <style>
+        {`
+          @keyframes bounce {
+            0%, 100% {
+              transform: translateY(0);
+            }
+            50% {
+              transform: translateY(-10px);
+            }
+          }
+        `}
+      </style>
+      <button className="absolute z-50 bottom-28 left-1/2 -translate-x-1/2">
+        <Icon
+          icon="solar:arrow-up-linear"
+          rotate={2}
+          scale={2}
+          className="transition-transform  animate-bounce"
+          style={{
+            animation: "bounce 2s infinite",
+          }}
+        />
+      </button>
     </>
   );
 }

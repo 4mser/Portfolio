@@ -75,6 +75,7 @@ const Slider = () => {
             )}
           </AnimatePresence>
           {/* <ButtonDemo isVisible={currentIndex === 0} /> */}
+          <ButtonDemo />
           <ParticleStars />
         </SwiperSlide>
         <SwiperSlide className="flex justify-center items-center"></SwiperSlide>
